@@ -1,4 +1,3 @@
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -6,7 +5,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Main m = new Main();
-            int[] random = m.createRandomArray(100_000_000);
+            int[] random = m.createRandomArray(50_000_000);
 
         long start= System.nanoTime();
         MergeSort sort = new MergeSort();

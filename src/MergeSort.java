@@ -1,11 +1,11 @@
 import java.util.Arrays;
 
-public class MergeSort {
+public class MergeSort extends Thread {
     public int[] mergeSort(int[] list){
         if(list.length>1) {
             int[] firsthalf = Arrays.copyOfRange(list, 0, (list.length / 2));
             int[] secondhalf = Arrays.copyOfRange(list, list.length / 2, list.length);
-            return merge(mergeSort(firsthalf), mergeSort(secondhalf));
+            return merge(new MergeSort().mergeSort(firsthalf), new MergeSort().mergeSort(secondhalf));
         }else {
             return list;
         }
